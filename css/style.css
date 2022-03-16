@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* Main Styling */
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2 em;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover{
+    /* background-color: #005b96; */
+    color: #fff;
+}
+
+#icon-dark:hover {
+    color: #fff;
+    background-color: none;
+}
+#icon-light:hover {
+    color: #189ad3;
+    background-color: none;
+}
+
+.lead {
+    font-size: 20px;
+}
+
+.primary {
+    color: #189ad3;
+}
+
+h1, h2, h3 {
+    padding-bottom: 20px;
+}
+
+p {
+    margin: 20px 0;
+}
+
+.btn {
+    /* background-color: #189ad3; */
+    background: linear-gradient(to bottom right, #189ad3, #00c9b7);
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.container {
+    margin: auto;
+    max-width: 1100px;
+    padding: 20px;
+}
+
+.bg-dark {
+    background-color: #999999;
+    color: #333;
+}
+
+.bg-light {
+    color: #fff;
+    /* background-color: #189ad3; */
+    background: linear-gradient(to bottom right, #189ad3, #00c9b7);
+}
+
+.footer {
+    color: #fff;
+    background-color: #333;
+    padding: 1px;
+    text-align: center;
+}
+/* Home Page Styling */
+
+/* Showcase */
+
+.home-showcase {
+    background: url('../assets/showcase-3.jpg') no-repeat center center/cover;
+    height: 600px;
+    margin-bottom: 10px;
+}
+
+.home-showcase-content {
+    text-align: center;
+    padding-top: 320px;
+}
+
+
+/* Intro */
+
+.home-info {
+    display: grid;
+    grid-template-areas: 
+    'home-info-image home-info-content'
+    ;
+
+}
+
+.home-info-content {
+    grid-area: home-info-content;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 10px;
+    margin-bottom: 15px;
+}
+.home-info-image {
+    grid-area: home-info-image;
+    height: 250px;    
+    margin-bottom: 5px;
+}
+
+/* features */
+.features {
+    display: grid;
+    grid-template-areas: 
+    'box-1 box-2 box-3'
+    ;
+}
+
+.box {
+    text-align: center;
+    padding: 20px;
+}
+
+.box-1 {
+    grid-area: box-1;
+}
+.box-2 {
+    grid-area: box-2;
+}
+.box-3 {
+    grid-area: box-3;
+}
+/* features */
+
+/* About Page */
+.main {
+    display: grid;
+    grid-template-areas: 
+    'showcase-about'
+    'doctors-info'
+    ;
+    padding-left: 25px;
+    padding-right: 20px;
+}
+/* showcase-about */
+.showcase-about{
+    background: url('../assets/dr_grp.jpg') no-repeat center center/cover;
+    height: 600px;
+}
+
+.showcase-about-content{
+    text-align: center;
+    padding: 320px;
+}
+/* showcase-about over */
+
+/* Video */
+.video {
+    text-align: center;
+    padding-bottom: 10px;
+}
+/* Video */
+
+/* Doctor Info */
+.doctors-info{
+    display: grid;
+    grid-template-areas: 
+    'doc1-image doc1-info'
+    'doc2-info doc2-image'
+    'doc3-image doc3-info'
+    ;
+}
+
+.doc1-image {
+    grid-area: doc1-image;
+    height: 300px;
+}
+.doc2-image {
+    grid-area: doc2-image;
+    height: 300px;
+    width: 50%;
+}
+.doc3-image {
+    grid-area: doc3-image;
+    height: 360px;
+}
+.doc1-info {
+    grid-area: doc1-info;
+    text-align: center;
+    padding: 20px;
+}
+.doc2-info {
+    grid-area: doc2-info;
+    text-align: center;
+    padding: 20px;
+}
+.doc3-info {
+    grid-area: doc3-info;
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 620px){
+
+    /* Home Page */
+    .home-info {
+        display: grid;
+        grid-template-areas: 
+        'home-info-image' 
+        'home-info-content'
+        ;
+    }
+    
+    .home-info-content {
+        grid-area: home-info-content;
+        text-align: center;
+        margin-bottom: 15px;
+        padding-right: 50px;
+    }
+    .home-info-image {
+        grid-area: home-info-image;
+        height: 250px;    
+        padding-left: 15px;
+        padding-right: 5px;
+    }
+
+    .features {
+        display: grid;
+        grid-template-areas: 
+        'box-1' 
+        'box-2' 
+        'box-3'
+        ;
+    }
+
+    /* Home Page Over */
+
+    /* About Page */
+    .showcase-about{
+        background: url('../assets/dr_grp.jpg') no-repeat center center/cover;
+    }
+    
+    .showcase-about-content{
+        text-align: justify;
+        padding: 220px;
+    }
+
+    .doctors-info{
+        display: grid;
+        grid-template-areas: 
+        'doc1-image' 
+        'doc1-info'
+        'doc2-image'
+        'doc2-info' 
+        'doc3-image' 
+        'doc3-info'
+        ;
+    }
+    .doc1-image {
+        grid-area: doc1-image;
+        text-align: center;
+    }
+    .doc2-image {
+        grid-area: doc2-image;
+        height: 300px;
+        text-align: center;
+    }
+    .doc3-image {
+        grid-area: doc3-image;
+        height: 360px;
+        text-align: center;
+    }
+    .doc1-info {
+        grid-area: doc1-info;
+        text-align: center;
+        padding: 20px;
+    }
+    .doc2-info {
+        grid-area: doc2-info;
+        text-align: center;
+        padding: 20px;
+    }
+    .doc3-info {
+        grid-area: doc3-info;
+        text-align: center;
+        padding: 20px;
+    }
+}
